@@ -1,0 +1,47 @@
+@CHARSET "ISO-8859-1";
+
+.headerTemplate h1 {
+    text-shadow: 2px 2px 1px #C0C0C0;
+    margin: 2px;
+    padding: 2px;
+    color: #4682B4;
+}   
+     
+h1 span {             	
+    text-shadow: 3px 3px 2px #B0C4DE;
+    color: #FF7F50;
+    margin: 2px;
+    padding: 2px;    
+    font-size: 0.35em;                                      
+} 
+
+.areaText p {
+    float:left;
+    max-width:500px;
+    margin-left:10px;
+}
+
+.alignmentRight {
+    float:right;
+    margin-top:-40px;
+    margin-left:10px;
+    margin-right:20px; 
+      
+}
+
+.alignmentRight a:HOVER {
+	color: #0000CD;
+}
+
+.alignmentRight a {
+	color: #4169E1;
+}
+
+.alignmentRight span {
+	color: #4169E1;
+}
+
+.alignmentRight span:HOVER {
+	color: #0000CD;
+}
+

@@ -1,0 +1,50 @@
+@CHARSET "ISO-8859-1";
+
+
+
+#tableResult .ui-widget {
+	font-size: 0.8em;
+}
+
+#tableResult td:hover {
+	background-color: #B0E0E6;
+}
+
+#tableResult .ui-column-title {
+	font-size: 0.8em; 
+}
+
+#tableResult input {
+	height:10px;
+	font-size: 0.5em;
+	padding: 0px;
+}
+
+
+input {
+	font-size: 0.5em; 
+	text-align: left; 
+}      
+
+.oddColumn  {
+	background-color: #DCDCDC; 
+}
+
+.evenColumn  {
+	background-color: white;
+}
+
+.ui-scrollpanel {
+	width: 98%;	
+	height: 600px;
+}
+
+#painelImpInst {
+	background-color: #E0FFFF;
+	font-size: 0.8em;	
+	text-align: left;
+	border-style: solid;
+	border-color: #DCDCDC;	
+	border-width: 1px;
+}
+

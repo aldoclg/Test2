@@ -1,0 +1,89 @@
+//@CHARSET "ISO-8859-1";
+
+
+ <!-- background-color: #FC5353; -->
+/*.oddColumn .ui-datalist-content {  
+    
+}*/
+
+
+
+.areaImagem {
+    float:left;
+    margin-top:-5px;
+}
+
+.ui-uploadForm {
+	background-color: #E0FFFF;
+	border-style: solid;
+	border-color: #DCDCDC;	
+	border-width: 1px;	
+	font-style: oblique;	
+	padding-top: 0px;	
+	border-radius: 2px;
+	padding-bottom: 3px;
+	
+}
+
+.headerLabel {
+	background: #E0FFFF; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#ADD8E6, #87CEFA); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#ADD8E6, #87CEFA); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#ADD8E6, #87CEFA); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#ADD8E6, #87CEFA); /* Standard syntax */    
+    padding-left: 3px;
+    padding-top: 5px;  
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.headerLabel #label1 {
+	margin-left: 5px;
+	font-style: oblique;
+	font-weight: 900;
+	font-size: medium;
+	color: #000000;
+}
+
+
+
+#uploadForm {
+	padding-left: 15px;
+	padding-bottom: 10px;
+	padding-right: 15px;
+}
+
+
+/* General Demo Style */
+body {
+	font-family: Cambria, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+	/* background: #fff url(../images/bg.jpg) repeat top left; */
+	font-weight: 400;
+	font-size: 15px;
+	color: #1d3c41;
+	overflow-y: scroll;
+}
+
+a {
+	color: blue;
+	font-weight: normal;
+}
+
+.link_login {
+	font-size: large; 
+	margin-left: 20px;
+	margin-top: 20px;
+	
+}
+
+
+.coluna {
+    float:left;
+    margin-top:50px;
+    width: 100%;
+	height: 20px;
+	margin: 0 auto;
+    background-color: green;
+}
+
+

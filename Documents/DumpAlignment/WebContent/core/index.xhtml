@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:p="http://primefaces.org/ui">
+	  
+	<h:head>	
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+        <meta http-equiv="refresh" content="#{session.maxInactiveInterval};url=#{request.contextPath}/logout.xhtml?type=timeout" />  
+          
+        <title>Dump Alignment</title>       
+        <h:outputScript name="progress.js"  library="js" /> 
+        <h:outputStylesheet name="header.css" library="css" /> 
+        <h:outputStylesheet name="style.css" library="css" />                
+    </h:head> 
+    
+    <h:body onload="zeraProgress();">  
+         
+    	<p:layout fullPage="true" id="layout">
+        	<p:layoutUnit position="north" visible="true" resizable="true" collapsible="true" >
+           		<ui:insert name="header">
+           			<ui:include src="/template/header.xhtml" />
+           		</ui:insert>
+           </p:layoutUnit>
+           <p:layoutUnit position="center" visible="true" resizable="true" collapsible="false" closable="false">           		
+           		<div class="ui-uploadForm">
+           			<div class="headerLabel">
+           				<h:outputLabel id="label1">Select:</h:outputLabel>
+           			</div>
+	           		<h:form  id="uploadForm" enctype="multipart/form-data" prependId="false">
+	           			
+	           			<p:remoteCommand name="closeListener" process="@this" actionListener="#{uploadBean.rollback()}" immediate="true" />
+	           			
+	           			<h:panelGrid id="uploadPainel" columns="2" columnClasses="label, value">
+	           		
+		           			<h:outputLabel>Software Record/Pcorp file: </h:outputLabel> 
+		           			             	             					
+			                <p:fileUpload id="uploadBase" 
+			                         value="#{uploadBean.uploadFileBase}" 
+			                         sizeLimit="1572864" 	
+			                         label="SWR"   
+			                         messageTemplate=" "                       
+			                         allowTypes="/(\.|\/)(log|txt|swr|TXT|SWR|LOG)$/" 
+			                         required="true"
+			                         requiredMessage="File not load"
+			                         update="messages" 
+			                         mode="simple" 
+			                         fileLimit="1" 
+			                         fileLimitMessage="You can select only one file!!!"
+			                         dragDropSupport="false"
+				                         />					
+							
+								         
+							<h:outputLabel>Pcorp file: </h:outputLabel>					  
+				            <p:fileUpload id="uploadDump" 
+									value="#{uploadBean.uploadFileDump}"  
+			                        sizeLimit="2097152"                         
+			                        label="Pcorp"
+			                        messageTemplate=" "                                    
+			                        allowTypes="/(\.|\/)(log|txt|TXT|LOG)$/" 
+			                        required="true"	                        
+			                        requiredMessage="File not load"
+			                        update="messages" 
+			                        mode="simple" 
+			                        fileLimit="1" 
+			                        fileLimitMessage="You can select only one file!!!"
+			                        dragDropSupport="false"
+			                        />
+						</h:panelGrid>
+		                
+		                <br/>        
+		                <p:commandButton id="fetch" 
+	                  			value="Fetch" 
+	                  	 		process="@form" 
+	                  	 		update="uploadForm" 
+	                  	 		ajax="false"                      
+	                  	 		action="#{uploadBean.fetch()}"	                        	 
+	                  	 		onclick="start(); PF('pbProgress').start();"                      	 	        
+	                  	 		type="submit"                                             
+	                  	 		icon="ui-icon-carat-1-e"                                                                                         
+	                  	 		iconPos="rigth"/>                	 		
+	                  	 		                   
+			            <br/><br/>	
+			                               
+			            <p:progressBar id="progress"                            		                            		
+	                    		value="#{uploadBean.progress}" 
+	                           	interval="2000"                            	
+	                            labelTemplate="{value}%" 
+	                            ajax="true"                            	
+	                            widgetVar="pbProgress" >
+	                           	<p:ajax event="complete" listener="#{uploadBean.onComplete}" />                           		
+	                  	</p:progressBar> 
+		                        
+		                <p:growl id="messages" showDetail="true" /><br/>
+		                
+	           		</h:form>
+           		</div>
+           		
+           </p:layoutUnit>
+       </p:layout>
+    
+	</h:body>
+	
+</html>
