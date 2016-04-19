@@ -1,0 +1,71 @@
+@CHARSET "ISO-8859-1";
+
+#test {	
+	margin-left: 40px;
+	margin-top: auto;
+	position: relative;
+	top: 100px;
+	text-align: center;
+	width:333px;
+	height: 352px;
+	padding: 58px 76px 0 76px;
+	color: #191970;
+	font: 12px Arial, Helvetica, sans-serif;	
+	border-right-width: 2px;
+	border-right-style: solid;
+	box-shadow: 2px
+}
+
+
+#test form {
+	top:20px;
+	left: 18%;
+	position: relative;
+	width: 205px;
+	padding: 10px 4px 6px 3px;
+	font-size: 16px;
+	color: #1C1C1C;
+}
+
+
+#test h1 {
+	top:10px;
+	left: 5%;	
+	position: relative;	
+}
+
+#test h2{
+	top:5px;
+	left: 0%;
+	position: relative;
+	margin: 2px;	
+    font: bold 40px "Calibri", Arial;
+    padding: 2px;
+	
+}
+
+#test h2 span {             	
+    color: #1E90FF;
+    margin: 2px;
+    padding: 2px;    
+    font-size: 0.35em;                                      
+}  
+
+
+#test h3 {
+	left: 20%;
+	position: relative;
+	padding:0;
+	margin:0;
+	color: #B0C4DE;
+	font: bold 44px "Calibri", Arial;
+}
+
+.imgTAG {
+	position:absolute;
+	left: 600px;
+	top:200px;		
+	width: 200px;
+	height: 200px;
+	
+}
